@@ -1,0 +1,219 @@
+
+/* Синяя тема (по умолчанию) */
+:root, [data-theme="blue"] {
+  --bg-body: #f8fafc;
+  --bg-header: #84a4bf;
+  --bg-topblock: #456b8c;
+  --bg-menu: #273d59;
+  --bg-card: #ffffff;
+  --bg-hover: #f6fcfe;
+  
+  --text-main: #1e293b;
+  --text-header: #ffffff;
+  --text-title: #733b1c;
+  --accent-color: #2563eb;
+  --accent-hover: #007ead;
+  --active-tab: #cc7d50;
+  
+  --border-color: #cbd5e1;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Коричневая тема */
+[data-theme="brown"] {
+  --bg-body: #fadfa4;
+  --bg-header: #82997f;
+  --bg-topblock: #576c55;
+  --bg-menu: #c9765c;
+  --bg-hover: #fff3d1;
+  
+  --text-main: #212121;
+  --text-header: #ffe8c5;
+  --text-title: #8f250e;
+  --accent-color: #425a40;
+  --accent-hover: #007ead;
+  --active-tab: #b4351a;
+  
+  --border-color: #d9b76e;
+}
+
+/* Зеленая тема */
+[data-theme="green"] {
+  --bg-body: #ebe8e0;
+  --bg-header: #172601;
+  --bg-topblock: #172601;
+  --bg-menu: #735f46;
+  --bg-hover: #d2d3b8;
+  
+  --text-main: #172601;
+  --text-header: #fff55d;
+  --text-title: #8b4513;
+  --accent-color: #14660d;
+  --accent-hover: #ecf248;
+  --active-tab: #ecf248;
+  
+  --border-color: #a1a621;
+}
+
+/* ==========================================================================
+   ОСНОВНЫЕ СТИЛИ (Используют переменные)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+/* Кавычки для тега <q> */
+body:lang(en) q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+body:lang(uk) q, body:lang(de) q { quotes: "\201E" "\201C"; }
+body:lang(ru) q, body:lang(fr) q { quotes: "\00AB" "\00BB" "\201E" "\201C"; }
+
+/* Заголовки */
+h1, h2, h3 {
+  color: var(--text-title);
+  margin: 20px 10px 10px 10px;
+}
+
+h1 { font-size: 20pt; text-align: center; }
+h2 { font-size: 16pt; text-align: left; }
+h3 { font-size: 13pt; text-align: left; }
+h2.cntr { text-align: center; text-indent: 0; }
+
+/* Шапка сайта */
+#topblock {
+  background: var(--bg-topblock);
+  min-height: 36px;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#donntu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Шапка сайта */
+#header {
+  background: var(--bg-header);
+  padding: 30px 20px;
+}
+
+/* Общий внутренний контейнер шапки */
+#header-content {
+  display: flex;             /* Фото и текст остаются в один ряд */
+  align-items: center;        /* Выравнивание по вертикали */
+  gap: 30px;                 /* Отступ между фото и текстом */
+  max-width: 1200px;         /* Увеличиваем ширину блока */
+  margin: 0 0 0 5%;          /* Фиксированный небольшой отступ слева (5%), убирает центрирование */
+}
+
+/* Стили для фото */
+#photomag {
+  flex-shrink: 0;            /* Запрещает сжимать фотографию */
+}
+
+#photomag img {
+  display: block;
+  border-radius: 4px;
+}
+
+/* Стили для текста справа */
+#headertext {
+  text-align: left;
+}
+
+#header h1, #header h2, #header h3 {
+  color: var(--text-header);
+  margin: 6px 0;             /* Компактные отступы между строками текста */
+}
+
+#header h1 { font-size: 20pt; text-align: left; }
+#header h2 { font-size: 14pt; text-align: left; }
+#header h3 { font-size: 12pt; text-align: left; }
+
+/* Таблицы */
+table#resume, table.search {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+table#resume tr td, table.search tr td {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+}
+
+table#resume tr:hover, table.search tr:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Блок с меню */
+#middleblock {
+  width: 100%;
+  margin: 15px 0;
+}
+
+#menu {
+  display: flex;             /* Выстраивает кнопки в один ряд */
+  justify-content: center;   /* Выравнивает кнопки строго по центру страницы */
+  flex-wrap: wrap;           /* Позволяет кнопкам переноситься на новую строку при узком экране */
+  gap: 8px;                  /* Отступ между кнопками */
+}
+
+/* Кнопки меню */
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#maintext {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.color {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.color:hover {
+  background-color: var(--accent-hover);
+  color: #ffffff;
+}
+
+.colorfix {
+  background-color: var(--active-tab);
+  color: #ffffff;
+  border: 1px solid var(--active-tab);
+}
+
+/* Подвал */
+#menub {
+  background: var(--bg-menu);
+  padding: 15px;
+  text-align: center;
+}
+
+.mitemb {
+  color: #ffffff;
+  margin: 0 10px;
+}
+
