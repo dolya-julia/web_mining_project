@@ -1,257 +1,251 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-  <title>Abstract - Hardware optimization in logic circuits of control units - Ivan Ivanov</title>
-  <link rel="stylesheet" type="text/css" href="../css/master_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Thesis topic: Intelligent communication system for visual recognition of Russian speech</title>
+    <link rel="stylesheet" type="text/css" href="../css/master_style.css">
 </head>
 
-<body lang="en">
+<body>
 
-	<div id="topblock">
-		<div id="langbox">
-			<a href="index.htm"><img src="../images/ru.png" alt="Русский" title="Русский" width="24" height="20" border=0></a> 
-		</div>
-		<div id="donntu">
-			<a href="http://donntu.ru/index.php?lang=eng" target=_blank>DonNTU</a> &nbsp; 
-			<a href="http://masters.donntu.ru/indexe.htm" target=_blank>Masters' portal</a>
-		</div>
-	</div>
+    <div id="topblock"> 
+        <div id="langbox">
+            <!-- РљРЅРѕРїРєР° РІРѕР·РІСЂР°С‚Р° РЅР° СЂСѓСЃСЃРєСѓСЋ РІРµСЂСЃРёСЋ СЂРµС„РµСЂР°С‚Р° -->
+            <a href="index.html"><img src="../images/ru.png" alt="Russian" title="Russian" width="24" height="20"></a>
+        </div>
+        <div id="donntu">
+            <a href="https://www.kubsu.ru" target="_blank">KubSU</a> &nbsp; 
+            <a href="https://moodle.kubsu.ru" target="_blank">Personal Account / Moodle</a>
+        </div>
+    </div>
 
-	<div id="header">
-		<div id="photomag">
-			<a href="../Ivanov_big.jpg"><img src="../photo.jpg" title="DonNTU Master Ivan Ivanov" alt="DonNTU Master Ivan Ivanov" border=0></a>
-		</div>
-		<div id="headertext">
-			<h2 class="hdr">Ivan Ivanov</h2>
-			<h3 class="hdr">Faculty	of computer science and technology (CST)</h3>
-			<h3 class="hdr">Department	of computer engineering (CE)</h3>
-			<h3 class="hdr">Speciality <q>Computer systems and networks</q></h3>
-			<h1 class="hdr">Hardware optimization in logic circuits of control units</h1>
-			<h3 class="hdr">Scientific adviser: Ph.D., Professor Petr Petrov</h3>
-		</div>
-	</div>
+    <div id="header">
+        <div id="header-content">
+            <div id="photomag">
+                <a href="../ivanov_big.jpg">
+                    <img src="../my_photo.jpg" width="180" height="240" title="KubSU Student Dolya Yuliia Grigorievna" alt="KubSU Student Dolya Yuliia Grigorievna">
+                </a>
+            </div>
+            <div id="headertext">
+                <h1 class="hdr">Julia Dolya</h1>
+                <h3 class="hdr">Faculty of Computer Technologies and Applied Mathematics</h3>
+                <h3 class="hdr">Department of Information Technology</h3>
+                <h3 class="hdr">Specialty &laquo;01.04.02 Applied Mathematics and Informatics&raquo;</h3>
+                <h2 class="hdr">Thesis topic: Intelligent communication system for visual recognition of Russian speech</h2>
+                <h3 class="hdr">Scientific Supervisor: Cand. Sc. (Phys.-Math.), Associate Professor Lukashchik E.P.</h3>
+            </div>
+        </div>
+    </div>
 
-	<div id="middleblock">
-	
-		<div id="menu">
-			<a class="button color" href="../indexe.htm">Resume</a>
-			<a class="button colorfix">Abstract</a>
-		</div>
-	
-		<div id="maintext">
-		
-			<h1>Abstract</h1>
-			
-			<p style="background-color: lightsteelblue; color: white; font-size: 14pt; margin: 0pt 20pt 0pt 20pt; padding: 10pt 10pt 10pt 10pt; text-indent: 0;">
-			This abstract is used as an example, with the permission of <a style="color: white; font-size: 13pt;" href="http://masters.donntu.ru/2011/fknt/tatolov/">Evgeniy Tatolov</a>.<br>
-			Original: <a style="color: white; font-size: 13pt;" href="http://masters.donntu.ru/2011/fknt/tatolov/diss/indexe.htm">http://masters.donntu.ru/2011/fknt/tatolov/diss/indexe.htm</a></p>
-			
-			<h2>Содержание</h2>
-			<ul class=content>
-				<li class=ct1><a href="#p0">Introduction</a>
-				<li class=ct1><a href="#p1">1. Theme urgency</a>
-				<li class=ct1><a href="#p2">2. Goal and tasks of the research</a>
-				<li class=ct1><a href="#p3">3. An approach to the unification of synthesis of Moore FSM on FPGA</a>
-				<li class=ct1><a href="#p4">Conclusion</a>
-				<li class=ct1><a href="#ref">References</a>
-			</ul>
-			
-			<a name=p0></a>
-			<h2>Introduction</h2>
-			
-			<p> Digital systems are widely used as basic elements of computer technologies, automatics, robotics, manufacturing, transport. 
-			Creation of very large-scale integration circuits (VLSI), building of systems-on-chip (SoC), development of field-programmable gate 
-			arrays (FPGAs) and complex programmable logic devices (CPLDs) changed the basis of implementation digital systems and proposed 
-			increased requirements to the process of their design, which has led to the widespread using of computer-aided design (CAD) tools 
-			and hardware description languages (HDLs). All this should raise quality of the resultant product, promote in realization of multifold 
-			analysis and testing. Besides, new base-oriented methods of combinational and sequential synthesis of logical circuits were created, 
-			the greatest effectiveness from which can be reached in the case of application automation and joint combined using with already known algorithms.</p>
-			
-			<p>Model of Moore finite state machine (FSM, offered by E. Moore in 1956 and named in his honor), as synchronous sequential circuit, 
-			is the part of numerous digital systems and is used in construction of control devices. High complexity of integrated circuits 
-			(which is increasing, according to the G. Moore's law) and theoretical basis of automatic calculations make possible the implementation 
-			of comprehensive algorithms of processing information. However direct realization of algorithms can lead to inefficient using of 
-			crystal's resources and extension of project's cost.</p>
-			
-			
-			<a name=p1></a>
-			<h2>1. Theme urgency</h2>
-			
-			<p>The number of methods of Moore FSM's hardware optimization is known: minimization of the amount of states (state reduction) 
-			and their specific encoding (state assignment), using features of target basis and algorithm of functioning, multilevel 
-			logic circuit's implementation. Mentioned methods are quite effective, but for getting the most economic FSM's implementation 
-			they have to be used jointly.</p>
-			
-			<p>Master's work is dedicated to the actual scientific task of development a unified approach to the synthesis of Moore FSM, 
-			which is directing on hardware amount reduction in resultant device and is including algorithmic, combinatory and circuitry 
-			optimizing techniques. FPGAs by Xilinx, which combine functionality, programmability and availability to consumers, 
-			are used as the target basis. CAD Xilinx ISE, Verilog HDL and Java SE are applied as tools of the research.</p>
-			
-			<a name=p2></a>
-			<h2>2. Goal and tasks of the research</h2>
-			
-			<p>Development of an approach to the unification of synthesis Moore FSM, directing on hardware amount reduction in FPGA is the goal of research.</p>
-			<p>Main tasks of the research:</p>
-			<ol>
-				<li>Analysis methods of minimization amount of states in completely and incompletely specified Moore FSM.
-				<li>Estimation ways of hardware amount reduction with the help of encoding states of Moore FSM.
-				<li>Search and detection characteristics of existing construction methods of logic circuits of Moore FSM and estimation possibilities of their use on FPGA.
-				<li>Association of functionally different optimization directions of Moore FSM hardware amount into the unified approach to synthesis and formation recommendations for it's use.
-				<li>Design of alternative variants of basic stages of unified Moore FSM synthesis process and estimate of it's efficiency.
-			</ol>
-			
-			<p><span class=itl>Research object</span>: Moore FSM synthesis.</p>
-			<p><span class=itl>Research subject</span>: association of hardware amount reduction methods at Moore FSM implementation on FPGA.</p>
-			
-			<a name=p3></a>
-			<h2>3. An approach to the unification of synthesis of Moore FSM on FPGA</h2>
-			
-			<p>An approach to the unification of synthesis of Moore FSM on FPGA is offered in article [<a href="#ref1">1</a>]. It joints several possibilities of
-			optimization and is directed on FPGA (fig. 1). Entity of an approach consists in sequential application of algorithmic, combinatory
-			and circuitry stages and using FPGA-oriented tools: CAD and HDLs.</p>
-			
-			<div class=img>
-				<img src="images/unification_process_e.png" width=682 height=589 alt="An approach to the unification of synthesis of Moore FSM">
-				<p class=imgcaption>Figure 1 – An approach to the unification of synthesis of Moore FSM</p>
-			</div>
-			
-			<p>On the first step of algorithmic stage of synthesis, arbitrary Moore FSM specification is led to a uniform type – state transition
-			table. Necessity of leading to a uniform type is caused by possibility of specification Moore FSM with the help of different
-			representation forms, such as: graph schemes of algorithm, state diagrams, ASM-diagrams (ASM – Algorithmic State Machine)
-			[<a href="#ref2">2</a>-<a href="#ref4">4</a>]. Second step of algorithmic stage consists of minimization of the state transition table. Algorithms of Brzozowski,
-			ARNES, SMAS, CHESMIN, SLIM, HSM2, STAMINA, OPTIMIST, BICA, ISM can be used for this [<a href="#ref3">3</a>, <a href="#ref5">5</a>-<a href="#ref16">16</a>].</p>
-						
-			<p>Combinatory stage is directed on effective encoding of minimized transition table's states and, also, on receiving of hardware-minimum
-			functions of the next state and, at necessity, of output functions of FSM. Considerable influence of states encoding method on
-			parameters of resultant logical circuit caused development of various approaches, directed on decreasing of power expenses,
-			high-speed performance, minimization of hardware amount. The last one of these approaches can be used on combinatory stage of
-			synthesis with the help of application, adaptation and modification of MUSTANG, MUSE, FEL-Code, JEDI, NOVA, Two-Hot Encoding,
-			DISA, one-hot  and positional-binary states encoding algorithms [<a href="#ref17">17</a>-<a href="#ref37">37</a>].</p>
-			
-			<p>Circuitry stage of synthesis process assumes using Moore FSM logical circuit's construction methods, directing on reduction of
-			hardware amount of target chip. Trivial and multilevel implementations, structures with transformation of objects codes, circuits
-			on counters can be carried to these methods [<a href="#ref37">37</a>]. Modern digital design is oriented on using HDLs (basically, VHDL and Verilog),
-			because of what the second step of circuitry stage is development of HDL program, which describes Moore FSM and is suitable for
-			processing of appropriate CAD and immersion into the chip.</p>
-			
-			<p>The described unified synthesis process can be successfully implemented automatically and assume only user's administrative functions:
-			describing of Moore FSM and choosing algorithms and structures, which should be used. Moreover, presented approach can be applied
-			to the number of other modern basis (CPLD, ASIC) and define the general direction of optimizing works at synthesis of logic
-			sequential circuits.</p>
-			
-			<p>Five Verilog-programs, describing given Moore FSM [<a href="#ref38">38</a>] (fig. 2) in various ways, were designed for an estimation of unified synthesis
-			process application to the exact example:</p>
-			
-			<div class=img>
-				<img src="images/animation.gif" width=594 height=420 alt="State diagram of Moore FSM">
-				<p class=imgcaption>
-					Figure 2 – State diagram of Moore FSM<br>(animation: 10 frames, 5 cycles of repeating, 160 kilobytes)<br>
-					(<i>x<sub>i</sub></i> – input signals, <i>y<sub>i</sub></i> – bites of state code, <i>z<sub>i</sub></i> – output signals)
-				</p>
-			</div>
-			
-			<ol>
-				<li>Implementation of not minimized Moore FSM with the help of XST (Xilinx Synthesis Technology) analyzer [<a href="#ref39">39</a>] (experiment 1).
-				<li>Implementation of minimized Moore FSM with the help of XST (Xilinx Synthesis Technology) analyzer (experiment 2).
-				<li>Implementation of minimized Moore FSM on two–level circuit [<a href="#ref40">40</a>] with positional-binary states encoding. Use of ROM with
-				    asynchronous reading [<a href="#ref39">39</a>] (experiment 3).
-				<li>Implementation of minimized Moore FSM on two–level circuit with positional-binary states encoding. Use of ROM with
-				    synchronous reading [<a href="#ref39">39</a>] and an additional signal of synchronization (experiment 4).
-				<li>Implementation of minimized Moore FSM on two–level circuit with positional-binary states encoding. Use of ROM with
-				    synchronous reading and back front of the main signal of synchronization (experiment 5).
-			</ol>
-			
-			<p>All researches were held with the help of CAD Xilinx ISE 13.1 for the family of FPGA Xilinx Spartan-3, namely for the chip XC3S200.
-			Results for cumulative hardware amount for five variants of implementation are graphically shown on fig. 3.</p>
-			
-			<div class=img>
-				<img src="images/synthesis_results_e.png" width=545 height=368 alt="Results of experiments">
-				<p class=imgcaption>Figure 3 – Results of experiments</p>
-			</div>
-			
-			<p>If the goal of optimization is amount of LUT-cells, the best result has been received at use of two–level implementation of minimized
-			Moore FSM with synchronous ROM and two signals of synchronization (experiment 4). In comparison with experiment 1, number of slices
-			has decreased in 3 times, number of flip-flops – in 1,5 times, number of LUT-cells – in 2,5 times. However in this case has increased
-			the total of circuit's outputs, number of synchronization signals and one RAM (Random Access Memory) module has been involved.</p>	
-			      
-			<a name=p4></a>
-			<h2>Conclusion</h2>
-			<p>Qualitative synthesis of digital systems, and Moore automata in particular, is one of the areas of logic design, 
-			and is not only theoretical research but also of practical interest. Development of optimal digital devices opens the way for 
-			more efficient use of capacity basis the implementation of <q>compaction</q> of projects, reduce material costs.</p>
-			
-			<p>Master's work is devoted to actual scientific problem of combining the basic methods of minimizing the instrumental Moore automata. In the trials carried out:</p>
-			<ol>
-				<li>The structure of a unified process for the synthesis of Moore automata and defines the functions of its components.
-				<li>Based on analysis of the literature highlights the main algorithms that can be used in the proposed approach to the unification of the synthesis of Moore automata.
-				<li>A number of experiments on the use of a unified process for the synthesis of Moore automata, analyzed the results.
-				<li>The possibilities of integrated automation of the developed approach to the unification of the synthesis of Moore automata are estimated requirements for the software by searching for functionally similar software synthesis of sequential logic circuits.
-			</ol>
+    <div id="middleblock">
+        
+        <div id="menu">
+            <a class="button color" href="../indexe.html">CV</a>
+            <a class="button colorfix">Abstract</a>
+        </div>
+        
+        <div id="maintext">
+        
+            <h2>Table of Contents</h2>
 
-			<p>Further studies focused on the following aspects:</p>
-			<ol>
-				<li>Qualitative improvement of the proposed approach to the unification of the synthesis of Moore automata, its complement and expand.
-				<li>Delimitation of the effectiveness of different variants of the basic stages of a unified process for the synthesis of Moore automata.
-				<li>Adaptation of known methods of constructing the logic of Moore automata to the base FPGA.
-				<li>Develop cross-platform functionality and computer-aided design of Moore automata (CAD) software that implements the proposed unified process synthesis.
-			</ol>
+            <ul class="content">
+                <li class="ct1"><a href="#p0">Introduction</a></li>
+                <li class="ct1"><a href="#p1">1. Relevance of the Topic</a></li>
+                <li class="ct1"><a href="#p2">2. Purpose, Tasks, and Planned Results of the Study</a></li>
+                <li class="ct1"><a href="#p3">3. Review of Research and Developments</a></li>
+                <li class="ct2"><a href="#p31">3.1 Overview of Global Research</a></li>
+                <li class="ct2"><a href="#p32">3.2 Overview of National Developments</a></li>
+                <li class="ct2"><a href="#p33">3.3 Overview of Local Results</a></li>
+                <li class="ct1"><a href="#p4">4. Development and Optimization of Neural Network Recognition Architecture</a></li>
+                <li class="ct1"><a href="#p5">Conclusions</a></li>
+                <li class="ct1"><a href="#ref">References</a></li>
+            </ul>
+            
+            <a name="p0"></a>
+            <h2>Introduction</h2>
+            <p>
+            Spoken speech is the most universal and natural way of human communication. However, in the modern world, diseases leading to temporary or permanent loss of speech ability are increasingly diagnosed[cite: 1]. At the same time, in many cases, patients fully retain consciousness, understanding of addressed speech, and the need for full communication. They continue to use articulation, but the absence of sound during conversation leads to difficulties in communication with medical staff and relatives[cite: 2]. In such cases, there is a need to use augmentative and alternative communication (AAC) tools.
+            </p>
+            <p>
+            One of the promising areas for the development of such tools are visual speech recognition systems based on neural networks and deep learning methods.
+            </p>
+            
+            <a name="p1"></a>
+            <h2>1. Relevance of the Topic</h2>
+            <p>
+            Currently, there are various types of augmentative and alternative communication (AAC) tools, such as sign language, bliss symbols, pictograms, communication boards, the PECS system, and specialized keyboards. However, their use is not always possible due to requirements for the patient's physical activity, as well as the need to use hands and fine motor skills, which is excluded in severe cases of diseases[cite: 3]. Moreover, caregivers often lack the necessary experience and training for effective communication with patients who have lost the ability to speak, and the use of existing AAC tools is limited by a lack of time to establish such understanding, knowledge, and situational specifics. This causes a growing current need for AAC systems for people with voice function impairments, which would allow recognizing words by human lip movements.
+            </p>
+            
+            <a name="p2"></a>
+            <h2>2. Purpose, Tasks, and Planned Results of the Study</h2>
+            <p>The purpose of the study is to develop a visual speech recognition system for a limited set of Russian speech commands based on articulation video sequences without using an audio signal.</p>
+            <p>In connection with this goal, the following tasks are solved in this work:</p>
+            <ol>
+                <li>To study existing solutions in the field of visual speech recognition and AAC systems;</li>
+                <li>To analyze existing neural network architectures and select a suitable model;</li>
+                <li>To investigate the possibilities of applying transfer learning methods to adapt the model to the Russian language;</li>
+                <li>To form a Russian-language dataset for training a neural network;</li>
+                <li>To adapt the pre-trained model to recognize Russian speech commands using transfer learning;</li>
+                <li>To evaluate recognition quality;</li>
+                <li>To develop an AAC web system based on the resulting model.</li>
+            </ol>
+            
+            <p><span class="itl">Object of study</span>: the process of visual recognition of speech units based on video sequences of articulatory movements.</p>
+            <p><span class="itl">Subject of study</span>: video sequence processing methods and neural network modeling used for visual recognition of a limited set of Russian speech units without using an audio signal.</p>
+            
+            <p>Within the framework of the master's thesis, it is planned to obtain relevant scientific results in the following areas:</p>
+            <ol>
+                <li>Experimental evaluation of the possibility of transferring knowledge of a model trained on English video data to the task of recognizing a limited set of Russian speech commands;</li>
+                <li>Evaluation of recognition quality after model adaptation and analysis of characteristic errors when processing Russian-language video sequences;</li>
+                <li>Identification of features and limitations of applying transfer learning under conditions of a limited volume of Russian-language training data.</li>
+            </ol>
+            <p>The planned practical result of the study is a software system for visual recognition of Russian speech commands with a web interface that allows transmitting a video sequence of articulatory movements, receiving the recognition result, and displaying it to the user. The developed prototype can serve as a basis for the further development of augmentative and alternative communication tools for people with voice function impairments.</p>
+            
+            <a name="p3"></a>
+            <h2>3. Review of Research and Developments</h2>
+            
+            <a name="p31"></a>
+            <h3>3.1 Overview of Global Research</h3>
+            <p>
+            One of the most famous examples of visual speech recognition systems is the SRAVI application, developed by Liopa after years of research. SRAVI is intended for patients with speech impairments after tracheostomy, stroke, paralysis, and other diseases, and is capable of converting silent lip movements into text or audio format. The application can be used on any mobile devices with a front camera. Before starting the recognition process, the device is positioned in front of the patient's face, after which computer vision algorithms automatically detect and track lip movements. As a result, within a few seconds, the three most likely phrase options are displayed on the screen. The SRAVI application is licensed as a medical device, but is not available for individual use; its supply is carried out only upon request from medical organizations. The system's recognition vocabulary is limited to a set of 40 predefined phrases chosen taking into account the patient's basic needs. The accuracy of the application in ideal conditions is 90%, but in a real clinical environment (insufficient lighting, bandages, head tilt), this value decreases. Also, the SRAVI system supports only English, which significantly limits its use for Russian-speaking patients.
+            </p>
+            <p>
+            Another example of AAC systems for people who have lost the ability to speak due to illness is the Lip2ja application created by a research group at Osaka University. Lip2ja is a lip-reading system integrated with the CoeFont speech platform. During operation, the application uses machine learning algorithms to analyze the position of the lips, subsequently matching the obtained features with words in Japanese. Built-in speech synthesis allows selecting an individual timbre for voicing phrases, as well as recreating the patient's voice from recordings made before surgery. However, due to the phonetic features of the Japanese language, the application recognizes only a limited set of phrases most commonly used in communication between the patient and medical staff.
+            </p>
+            <p>
+            There is also a specialized VSRICU architecture for lip-reading intensive care patients, developed by researchers at RWTH Aachen University in Germany. Such a model combines two approaches: audio and visual recognition. At the first stage, the neural network uses the input video frames of the patient's face to generate audio features and uses them as intermediate values. At the second stage, based on the obtained characteristics, the final text recognition result is formed. To train the model, the researchers collected a dataset containing 238 phrases in English and German recorded with the participation of intensive care patients. The command vocabulary itself was selected by experienced doctors to take into account the most important topics in communication between the patient, medical staff, and relatives. Such a rejection of publicly available audiovisual datasets made it possible to focus on the specific conditions of a hospital room and simplified the training process of the neural network.
+            </p>
 
-			<p>This master's work is not completed yet. Final completion: December 2011. 
-			The full text of the work and materials on the topic can be obtained from the author or his head after this date.</p>
-			
-			<a name=ref></a>
-			<h2>References</h2>
-			<ol>
-				<li><a name="ref1"></a>Ковалев С.А. Подход к унификации процесса синтеза МПА Мура для FPGA / С.А. Ковалев, И.Я. Зеленёва, Е.Р. Татолов // Материалы Двенадцатого международного научно-практического семинара &laquo;Практика и перспективы развития партнерства в сфере высшей школы&raquo;. – Донецк-Таганрог, 2011. – Том 2. – С. 45-48.
-				<li><a name="ref2"></a>Mano M. Digital design / M. Mano. – Prentice Hall, 2003. – 516 pp.
-				<li><a name="ref3"></a>Nelson V. Digital logic circuit analysis and design / V. Nelson, H. Nagle, J. Irwin, B. Carroll. – Prentice Hall, 1995. – 842 pp.
-				<li><a name="ref4"></a>Barkalov A.A. Synthesis of operational and control automata / A.A. Barkalov, L.A. Titarenko. – Donetsk: DonNTU, TechPark DonNTU UNITECH, 2009. – 256 pp.
-				<li><a name="ref5"></a>Avedillo M.J. New approach to the state reduction in incompletely specified sequential machines / M.J. Avedillo, J.M. Quintana, J.L. Huertas // Proceedings of IEEE International Symposium on Circuits and Systems. – New Orleans, 1990. – pp. 440-443.
-				<li><a name="ref6"></a>Avedillo M.J. SMAS: a program for the concurrent state reduction and state assignment of finite state machines / M.J. Avedillo, J.M. Quintana, J.L. Huertas // Proceedings of IEEE International Symposium on Circuits and Systems. – 1991. – vol. 3. – pp. 1781-1784.
-				<li><a name="ref7"></a>Champarnaud J.-M. Split and minimizing: Brzozowski's algorithm / J.-M. Champarnaud, A. Khorsi, T. Paranthoen // Prague Stringology Conference. – Prague, 2002. – pp. 96-104.
-				<li><a name="ref8"></a>Goren S. CHESMIN: a heuristic for state reduction in incompletely specified finite state machines / S. Goren, F. Ferguson // Proceedings of the Conference on Design, Automation and Test in Europe. – 2002. – pp. 248-254.
-				<li><a name="ref9"></a>Higuchi H. A fast state reduction algorithm for incompletely specified finite state machines / H. Higuchi, Y. Matsunaga // 33rd Annual Conference of Design Automation. – Las Vegas, 1996. – pp. 463-466.
-				<li><a name="ref10"></a>Hu H. HSM2: a new heuristic state minimization algorithm for finite state machine / H. Hu, H.-X. Xue, J.-N. Bian // Journal of Computer Science and Technology. – 2004. – № 19 (5). – pp. 729-733.
-				<li><a name="ref11"></a>Rho J.-K. Exact and heuristic algorithms for the minimization of incompletely specified state machines / J.-K. Rho, G. Hachtel, F. Somenzi, R. Jacoby // IEEE Transactions on Computer-Aided Design. – 1994. – vol. 13. – pp. 167-177.
-				<li><a name="ref12"></a>Xu Y. Describing an n log n algorithm for minimizing states in deterministic finite automaton [Электронный ресурс]. – Режим доступа: <a href="http://www.cs.sun.ac.za/rw711/documentation/hopcroft2.pdf">http://www.cs.sun.ac.za...</a>.
-				<li><a name="ref13"></a>Fuhrer R.M. OPTIMIST: state minimization for optimal 2-level logic implementation / R.M. Fuhrer, S.M. Nowick // Proceedings of International Conference of Computer-Aided Design. – 1997. – pp. 308-315.
-				<li><a name="ref14"></a>Pena J.M. A new algorithm for exact reduction of incompletely specified finite state machines / J.M. Pena, A.L. Oliveira // IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. – 1999. – vol. 18 (11). – pp. 1619-1632.
-				<li><a name="ref15"></a>Kam T. A fully implicit algorithm for exact state minimization / T. Kam, T. Villa, R. Brayton, A. Sangiovanni-Vincentelli // Proceedings of the Design Automation Conference. – 1994. – pp. 684-690.
-				<li><a name="ref16"></a>Almeida M. On the performance of automata minimization algorithms / M. Almeida, N. Moreira, R. Reis // Technical Report Series: DCC-2007-03. – 2007. – 12 pp.
-				<li><a name="ref17"></a>Slusarczyk A. State assignment techniques – short review [Электронный ресурс]. – Режим доступа: <a href="http://web.cecs.pdx.edu/~mperkows/nov17/051.slusarczyk-state-assignment-review.pdf">http://web.cecs.pdx.edu...</a>.
-				<li><a name="ref18"></a>De Micheli G. KISS: a program for optimal state assignment of finite state machines / G. De Micheli, R. Brayton, A. Sangiovanni-Vincentelli // Proceedings of IEEE International Conference of Computer-Aided Design. – Santa Clara, 1984. – pp. 209-211.
-				<li><a name="ref19"></a>De Micheli G. Optimal state assignment for finite state machines / G. De Micheli, R. Brayton, A. Sangiovanni-Vincentelli // IEEE Transactions on Computer-Aided Design. – 1985. – pp. 269-285.
-				<li><a name="ref20"></a>De Micheli G. Optimal encoding of control logic / G. De Micheli // Proceedings of the International Conference on Circuits and Computer Design. – 1984. – pp. 16-22.
-				<li><a name="ref21"></a>El-Maleh A. Finite state machine state assignment for area and power minimization / A. El-Maleh, S.M. Sait, F.N. Khan // Proceedings of IEEE International Symposium on Circuits and Systems. – 2006. – pp. 5303-5306.
-				<li><a name="ref22"></a>Devadas S. MUSTANG: state assignment of finite state machines targeting multilevel logic implementations / S. Devadas, H.-K. Ma, A.R. Newton, A. Sangiovanni-Vincentelli // IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. – 1998. – vol. 7 (12). – pp. 1290-1300.
-				<li><a name="ref23"></a>Du X. MUSE: a multilevel symbolic encoding algorithm for state assignment / X. Du, G. Hachtel, B. Lin, A.R. Newton // IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. – 1991. – vol. 10 (1). – pp. 28-38.
-				<li><a name="ref24"></a>Kubatova H. FEL-Code: FSM internal state encoding method / H. Kubatova, M. Becvar // Proceedings of 5th International Workshop on Boolean Problems. – Freiberg, 2002. – pp. 109-114.
-				<li><a name="ref25"></a>Lin B. Synthesis of multiple level logic from symbolic high-level description languages / B. Lin, A.R. Newton // Proceedings of the International Conference on VLSI. – Munich, 1989. – pp. 187-196.
-				<li><a name="ref26"></a>Villa T. NOVA: state assignment of finite-state machines for optimal two-level logic implementation / T. Villa, A. Sangiovanni-Vincentelli // IEEE Transactions on Computer-Aided Design. – 1990. – pp. 905-924.
-				<li><a name="ref27"></a>Gupta, B.N.V.M. A state assignment scheme targeting performance and area / B.N.V.M. Gupta, H. Narayanan, M.P. Desai // Proceedings of 12th International Conference on VLSI Design. – 1999. – pp. 378-383.
-				<li><a name="ref28"></a>Martinez M. A dynamic model for the state assignment problem / M. Martinez, M.J. Avedillo, J.M. Quintana, J.L. Huertas // Proceedings of Design, Automation and Test in Europe. – Paris, 1998. – pp. 835-839.
-				<li><a name="ref29"></a>Golson S. One-hot state machine design for FPGAs / S. Golson // Proceedings of the 3rd PLD Design Conference. – Santa Clara, 1993. – pp. 1-6.
-				<li><a name="ref30"></a>Almaini A. State assignment of finite state machines using a genetic algorithm / A. Almaini, J. Miller, P. Thomson, S. Billina // IEEE Proceedings on Computer and Digital Techniques. – 1995. – pp. 279-286.
-				<li><a name="ref31"></a>Amaral J. Designing genetic algorithms for the state assignment problem / J. Amaral, K. Turner, J. Chosh // IEEE Transactions on Systems, Man, and Cybernetics. – 1995. – vol. 25. – pp. 659-694.
-				<li><a name="ref32"></a>Chyzy M. Evolutionary algorithm for state assignment of finite state machines / M. Chyzy, W. Kosinski // Artificial Intelligence Methods. – Gliwice, 2003. – pp. 51-52.
-				<li><a name="ref33"></a>Nedjah N. Evolutionary synthesis of synchronous finite state machines / N. Nedjah, L.M. Mourelle // Evolvable Machines. – Berlin, 2004. – pp. 103-128.
-				<li><a name="ref34"></a>Chattopadhyay S. Area conscious state assignment with flip-flop and output polarity selection for finite state machine synthesis – a genetic algorithm approach / S. Chattopadhyay // The Computer Journal. – 2005. – vol. 48 (4). – pp. 443-450.
-				<li><a name="ref35"></a>Hasteer G. Parallel algorithms for state assignment of finite state machines. Master's thesis. – University of Illinois, 1996. – 58 pp.
-				<li><a name="ref36"></a>Bader D.A. A parallel state assignment algorithm for finite state machines / D.A. Bader, K. Madduri // Proceedings of IEEE Conference on High-Performance Computing. – Bangalore, 2004. – pp. 297-308.
-				<li><a name="ref37"></a>Баркалов А.А. Синтез микропрограммных автоматов на заказных и программируемых СБИС / А.А. Баркалов, Л.А. Титаренко. – Донецк: ДонНТУ, Технопарк ДонНТУ УНИТЕХ, 2009. – 336 с.
-				<li><a name="ref38"></a>Уилкинсон Б. Основы проектирования цифровых схем / Б. Уилкинсон. – М.: Издательский дом <q>Вильямс</q>, 2004. – 320 с.
-				<li><a name="ref39"></a>XST User Guide for Virtex-4, Virtex-5, Spartan-3, and Newer CPLD Devices [Электронный ресурс]. – Режим доступа: <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx13_1/xst.pdf">http://www.xilinx.com...</a>.
-				<li><a name="ref40"></a>Баркалов А.А. Синтез устройств управления на программируемых логических устройствах / А.А. Баркалов. – Донецк: ДонНТУ, 2002. – 262 с.
-			</ol>
-		
-		</div> <!-- maintext -->
-	
-	</div> <!-- middleblock -->
+            <a name="p32"></a>
+            <h3>3.2 Overview of National Developments</h3>
+            <p>
+            One of the examples of national research in the field of visual speech recognition is the development by specialists of the St. Petersburg Federal Research Center of the Russian Academy of Sciences (SPC RAS), aimed at improving the accuracy of voice assistants in noisy conditions. At the core of the developed system is a neural network trained to recognize several hundred commands by audiovisual features. Thus, the neural network automatically selects which type of data will provide maximum accuracy. Testing of the system's operation was carried out with the participation of heavy truck drivers. The accuracy of command recognition solely by lip reading was 60-80%, and in combination with an audio signal, more than 90%.
+            </p>
+            <p>
+            In the work of G.S. Afanasenko, the stages of developing a Russian speech visual recognition system are considered. The LipNet architecture is implemented as a neural network. However, at the time of publication, model training was still ongoing, so quality indicators are not presented in the article.
+            </p>
 
-	<div id="menub">
-		<a class="mitemb" href="../indexe.htm">Resume</a>
-	</div>
+            <a name="p33"></a>
+            <h3>3.3 Overview of Local Results</h3>
+            <p>
+            Among related studies performed at KubSU, we can note works devoted to face detection and facial landmark detection using neural networks. The work of A.A. Shulga and E.P. Lukashchik considers the task of face detection in images. The publication by D.Yu. Romanyuta and E.P. Lukashchik investigates the task of determining facial landmark points.
+            </p>
+            
+            <a name="p4"></a>
+            <h2>4. Development and Optimization of Neural Network Recognition Architecture</h2>
+            <p>
+            Of greatest practical interest is the development of a model adapted to visual speech recognition in Russian. However, there are no publicly available Russian-language datasets that would meet the conditions of the problem under consideration. At the same time, training a neural network from scratch for lip-reading requires a large amount of data, since the language contains many phonemes that are visually indistinguishable from each other. Collecting and annotating a custom Russian-language dataset requires huge expenditures of time and computational resources, which is irrational within the current study. Therefore, the optimal solution is to use the transfer learning method, which involves adapting an English-language model to the specifics of the Russian language.
+            </p>
+            <p>
+            For this purpose, at the initial stage of the study, a neural network for visual recognition of English words was developed and trained. For its training, the GRID dataset was selected from open and freely available datasets. The GRID dataset is characterized by high data quality, but due to the predefined phrase template, it does not reflect the structure of natural conversational speech. For this reason, individual words were extracted from the original sentences and subsequently used as independent training examples. However, when forming the final dataset, not all presented words were used; prepositions and individual letters were excluded from the sample. This is due to their short temporal duration and low articulatory informativeness. Thus, a dataset including 22 words was formed. 
+            </p>
+            <p>
+            The next stage was data preprocessing. For this, the original video recordings were segmented using text transcriptions and the start and end time boundaries of each command's pronunciation. Then the obtained fragments were split into frame sequences. For each frame, the region of interest (ROI) was extracted using the MediaPipe tool. 
+            </p>
+            
+            <div class="img">
+                <img src="../images/image1.jpg" alt="Data preprocessing scheme">
+                <p class="imgcaption">Figure 1 вЂ” Data preprocessing</p>
+            </div>
+
+            <p>
+            At the initial stage of dataset preparation, only the lip zone was considered as the region of interest. However, during the analysis, it turned out that part of the important information about articulation is lost with this method. Although lips are the main visual component of articulation, speech is formed as a result of the interaction of several anatomical parts of the face. For example, the position of the lower jaw indicates the degree of mouth opening, and cheek movement indicates its rounding or stretching. Expanding the region of interest also increases resistance to face shifting in the frame and the speaker's facial expression features. As a result, coordinates corresponding to the chin, part of the cheeks, and the base of the nose were selected for the region of interest. Then, each frame was cropped according to the obtained region and resized to a fixed size of 96 by 96. 
+            </p>
+
+            <div class="img">
+                <img src="../images/image2.png" alt="Dataset image examples">
+                <p class="imgcaption">Figure 2 вЂ” Examples of images from the dataset</p>
+            </div>
+
+            <p>
+            To recognize English words, a model was developed consisting of a 3D convolutional network for extracting spatio-temporal articulation features, a bidirectional LSTM for modeling temporal dependencies, a fully connected layer, and CTC decoding at the output. The CTC loss function maps input frame sequences to target labels without exact frame-by-frame correspondence between them, which is typical for the lip-reading task.
+            </p>
+
+            <div class="img">
+                <img src="../images/image3.png" alt="Model architecture for English word recognition">
+                <p class="imgcaption">Figure 3 вЂ” Architecture of the model for English word recognition</p>
+            </div>
+
+            <p>
+            Model quality evaluation was performed on a test sample consisting of 26 thousand examples using two metrics. The CER metric result was 14.18%, meaning 14% of characters were recognized incorrectly. The WER metric value was 23.77%, meaning 24% of words were recognized incorrectly. Thus, 76% of words were recognized completely correctly.
+            </p>
+            <p>
+            At the next stage, the resulting model was fine-tuned on a custom English-language dataset of mixed, noisier video recordings obtained from the Internet. This step was necessary to increase the network's generalization ability and adapt it to the specifics of the system's target application, given that Russian-language datasets recorded under ideal conditions do not exist.
+            </p>
+            <p>
+            Preparation of the Russian-language dataset was performed using the previously developed sequence of preprocessing methods, including video segmentation by time boundaries, ROI extraction, and conversion to fixed-size frames. The generated Russian-language dataset consists of video data collected from open Internet sources and obtained with the participation of acquaintances.
+            </p>
+            <p>
+            To adapt the English-language model to the Russian language, transfer learning was used. The selected model architecture consists of two main components. The first part, represented by a 3D convolutional network, extracts initial spatio-temporal articulation features, allowing it to be transferred unchanged to work with a new language. This is due to the fact that visual characteristics and dynamics of articulatory movements do not depend on a specific language, but are universal. Thus, pre-trained weights of the convolutional network can be used to adapt the entire model. The second part of the architecture, corresponding to the recurrent network and the output fully connected layer, requires mandatory fine-tuning on new data with a modified vocabulary consisting of Russian alphabet characters. Meanwhile, all other components of the model architecture remain unchanged.
+            </p>
+            <p>
+            Unlike intermediate fine-tuning on a mixed English-language dataset, where the dictionary of recognizable symbols and commands remained unchanged, transition to another language implies a complete change in the model's output. For this, using transfer learning, weights of the English model adapted to noisy data were transferred into the structure of the new Russian-language network. Then, weight coefficients of the output fully connected layer were deleted from parameter values because its dimension did not match the power of the Russian character dictionary. A new fully connected layer associated with the target alphabet and also taking into account a special blank symbol necessary for the correct operation of the CTC loss function was added to the architecture. Next, fine-tuning was applied. Thus, all layers of the 3D convolutional network were frozen, while parameters of the recurrent network and the updated fully connected layer changed during training.
+            </p>
+
+            <div class="img">
+                <img src="../images/image4.jpg" alt="Applying transfer learning">
+                <p class="imgcaption">Figure 4 вЂ” Application of transfer learning</p>
+            </div>
+
+            <p>
+            The Adam optimizer was used to optimize parameters, distinguished by adaptive step tuning for each network weight. To preserve previously extracted features and carefully readjust the neural network to the Russian language, a reduced learning rate was chosen compared to the pre-training stage. Also, instead of the OneCycleLR scheduler, the ReduceLROnPlateau algorithm was used. Due to the fact that network fine-tuning requires only adjusting model weights rather than training from scratch, the learning rate must be changed smoothly to prevent catastrophic forgetting of previously formed features. The ReduceLROnPlateau scheduler decreases the gradient descent step only when the target recognition quality metric on the validation set stops improving. This allows all architecture components to synchronize gradually, preventing changes in frozen layer parameters and ensuring fast training of output layers.
+            </p>
+            <p>
+            At the current stage, training of the updated model is being carried out on the formed Russian-language dataset. The model is trained on two parts of the dataset simultaneously (Internet video recordings and custom ones), but included with varying frequencies. Moreover, more weight is given to custom recordings since they correspond most closely to the intended application conditions of the system being developed.
+            </p>
+            <p>
+            According to interim evaluation results at epoch 22 of training, the CER value was 13.52%, and WER was 24.17%. Model training continues. To determine the effectiveness of the chosen approach, it is required to complete training, evaluate recognition quality on a test set, analyze errors made, and make adjustments if necessary.
+            </p>
+            <p>
+            Also, the main functional components of the developed system for visual recognition of speech commands were determined: a video data capture and preprocessing module, a speech recognition module, and a result representation module in text and audio formats. Further work involves completing model training and evaluation, as well as implementing and testing the developed system.
+            </p>
+
+            <a name="p5"></a>
+            <h2>Conclusions</h2>
+            <p>
+            Visual speech recognition is one of the promising areas for the development of intelligent video data processing systems and augmentative and alternative communication tools. At the same time, creating models for the Russian language is complicated by the limited availability of video data and the ambiguity of the visual representation of individual speech units. In this regard, studying the possibility of adapting pre-trained neural network models to recognize Russian speech is of practical interest.
+            The master's thesis is devoted to the development and study of a visual recognition system for a limited set of Russian speech commands using deep learning and transfer learning methods. Within the framework of the study, the following was accomplished:
+            </p>
+            <ol>
+                <li>A neural network model for visual recognition of English words was developed and trained based on the open GRID dataset. An experimental evaluation of the model was carried out, resulting in CER and WER metrics of 14.18% and 23.77%, respectively.</li>
+                <li>A video data preprocessing pipeline was developed, including video segmentation, ROI extraction using MediaPipe, and resizing video frames to a uniform format.</li>
+                <li>Additional training of the English model on video materials from open Internet sources was performed to adapt to more diverse shooting conditions.</li>
+                <li>A Russian-language video dataset was formed, including materials from open Internet sources and custom video recordings.</li>
+                <li>Transfer learning of the pre-trained model to the task of Russian speech recognition with adaptation of the output layer to the target alphabet was implemented. Interim model training on Russian-language data was carried out; at the twentieth epoch, CER and WER values were 13.51% and 24.8%, respectively.</li>
+                <li>The main functional components of the developed system were determined, including capture and preprocessing of video data, recognition of speech commands, and output of results in text and audio formats.</li>
+            </ol>
+            <p>Further research is directed towards the following aspects:</p>
+            <ol>
+                <li>Completion of training the Russian-language model and conducting a final quality evaluation on an independent test set.</li>
+                <li>Analysis of recognition errors and investigation of the impact of training data composition on model performance.</li>
+                <li>Experimental study of the effectiveness of transfer learning when adapting the model to the Russian language, including comparison with alternative training options.</li>
+                <li>Implementation and verification of a software prototype of the Russian speech visual recognition system.</li>
+            </ol>
+            <p>
+            At the time of writing this abstract, the master's thesis is not yet completed. Final completion: June 2027. The full text of the work and related materials can be obtained from the author or supervisor after the specified date.
+            </p>
+            
+            <a name="ref"></a>
+            <h2>References</h2>
+            <ol>
+                <li id="ref1">Sun, H. Global burden of head and neck cancer: Epidemiological transitions, inequities, and projections to 2050 / H. Sun, M. Yu, Z. An [et al.] // Frontiers in Oncology. вЂ“ 2025. вЂ“ Vol. 15. вЂ“ Art. 1665019. вЂ“ DOI 10.3389/fonc.2025.1665019.</li>
+                <li id="ref2">Brambilla, S. Communication difficulties in mechanically ventilated voiceless patients in intensive care units: A qualitative study / S. Brambilla, D. Ausili, G. Locatelli [et al.] // Nursing in Critical Care. вЂ“ 2025. вЂ“ Vol. 30, в„– 3. вЂ“ Art. e70037. вЂ“ DOI 10.1111/nicc.70037.</li>
+                <li id="ref3">Yau, S. H. Comparing and contrasting barriers in augmentative alternative communication use in nonspeaking autism and complex communication needs: multi-stakeholder perspectives / S. H. Yau, K. Choo, J. Tan [et al.] // Frontiers in Psychiatry. вЂ“ 2024. вЂ“ Vol. 15. вЂ“ Art. 1385947. вЂ“ DOI 10.3389/fpsyt.2024.1385947.</li>
+                <li id="ref4">Musalia, M. A user evaluation of speech/phrase recognition software in critically ill patients: a DECIDE-AI feasibility study / M. Musalia, S. Laha, J. Cazalilla-Chica [et al.] // Critical Care. вЂ“ 2023. вЂ“ Vol. 27, в„– 1. вЂ“ Art. 277.</li>
+                <li id="ref5">AI lip-reading app to playback lip movements вЂ” Voices lost due to illness can now be restored : [СЃР°Р№С‚]. вЂ“ URL: https://sj.jst.go.jp/news/202412/n1202-03k.html (РґР°С‚Р° РѕР±СЂР°С‰РµРЅРёСЏ: 11.07.2026).</li>
+                <li id="ref6">Laux, H. Two-stage visual speech recognition for intensive care patients / H. Laux [et al.] // Scientific Reports. вЂ“ 2023. вЂ“ Vol. 13. вЂ“ Art. 928.</li>
+                <li id="ref7">РњРµС‚РѕРґ РІРёР·СѓР°Р»СЊРЅРѕРіРѕ Р°РЅР°Р»РёР·Р° Р»РёС†Р° РІРѕРґРёС‚РµР»СЏ РґР»СЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ С‡С‚РµРЅРёСЏ СЂРµС‡Рё РїРѕ РіСѓР±Р°Рј РїСЂРё СѓРїСЂР°РІР»РµРЅРёРё С‚СЂР°РЅСЃРїРѕСЂС‚РЅС‹Рј СЃСЂРµРґСЃС‚РІРѕРј / Рђ. Рђ. РђРєСЃРµРЅРѕРІ, Р”. Рђ. Р СЋРјРёРЅ, Рђ. Рњ. РљР°С€РµРІРЅРёРє [Рё РґСЂ.] // РљРѕРјРїСЊСЋС‚РµСЂРЅР°СЏ РѕРїС‚РёРєР°. вЂ“ 2022. вЂ“ Рў. 46, в„– 6. вЂ“ РЎ. 955-962. вЂ“ DOI 10.18287/2412-6179-CO-1092. вЂ“ EDN LLQFSW.</li>
+                <li id="ref8">РђС„Р°РЅР°СЃРµРЅРєРѕ, Р“. РЎ. Р§С‚РµРЅРёРµ РїРѕ РіСѓР±Р°Рј СЂСѓСЃСЃРєРѕР№ СЂРµС‡Рё РЅР° РѕСЃРЅРѕРІРµ С‚РµС…РЅРѕР»РѕРіРёРё СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ Р»РёС† / Р“. РЎ. РђС„Р°РЅР°СЃРµРЅРєРѕ // 81-СЏ РЅР°СѓС‡РЅР°СЏ РєРѕРЅС„РµСЂРµРЅС†РёСЏ СЃС‚СѓРґРµРЅС‚РѕРІ Рё Р°СЃРїРёСЂР°РЅС‚РѕРІ Р‘РµР»РѕСЂСѓСЃСЃРєРѕРіРѕ РіРѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅРѕРіРѕ СѓРЅРёРІРµСЂСЃРёС‚РµС‚Р° : РњР°С‚РµСЂРёР°Р»С‹ РєРѕРЅС„РµСЂРµРЅС†РёРё. Р’ 3-С… С‡Р°СЃС‚СЏС…, РњРёРЅСЃРє, 15вЂ“25 РјР°СЏ 2024 РіРѕРґР°. вЂ“ РњРёРЅСЃРє: Р‘РµР»РѕСЂСѓСЃСЃРєРёР№ РіРѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅС‹Р№ СѓРЅРёРІРµСЂСЃРёС‚РµС‚, 2024. вЂ“ РЎ. 188-191. вЂ“ EDN OYUMAV.</li>
+                <li id="ref9">РЁСѓР»СЊРіР°, Рђ. Рђ. РњРµС‚РѕРґРёРєР° РѕР±РЅР°СЂСѓР¶РµРЅРёСЏ Р»РёС†Р° РґР»СЏ СЃРёСЃС‚РµРј РІРёРґРµРѕРєРѕРЅС‚СЂРѕР»СЏ РЅР° РѕСЃРЅРѕРІРµ РЅРµР№СЂРѕРЅРЅРѕР№ СЃРµС‚Рё / Рђ. Рђ. РЁСѓР»СЊРіР°, Р•. Рџ. Р›СѓРєР°С‰РёРє // РџСЂРёРєР»Р°РґРЅР°СЏ РјР°С‚РµРјР°С‚РёРєР°: СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ РїСЂРѕР±Р»РµРјС‹ РјР°С‚РµРјР°С‚РёРєРё, РёРЅС„РѕСЂРјР°С‚РёРєРё Рё РјРѕРґРµР»РёСЂРѕРІР°РЅРёСЏ : РњР°С‚РµСЂРёР°Р»С‹ III РІСЃРµСЂРѕСЃСЃРёР№СЃРєРѕР№ РЅР°СѓС‡РЅРѕ-РїСЂР°РєС‚РёС‡РµСЃРєРѕР№ РєРѕРЅС„РµСЂРµРЅС†РёРё РјРѕР»РѕРґС‹С… СѓС‡РµРЅС‹С…, РљСЂР°СЃРЅРѕРґР°СЂ, 21вЂ“24 Р°РїСЂРµР»СЏ 2021 РіРѕРґР°. РўРѕРј II. вЂ“ РљСЂР°СЃРЅРѕРґР°СЂ: Р¤Р“Р‘РЈ "Р РѕСЃСЃРёР№СЃРєРѕРµ СЌРЅРµСЂРіРµС‚РёС‡РµСЃРєРѕРµ Р°РіРµРЅС‚СЃС‚РІРѕ" РњРёРЅСЌРЅРµСЂРіРѕ Р РѕСЃСЃРёРё РљСЂР°СЃРЅРѕРґР°СЂСЃРєРёР№ Р¦РќРўР- С„РёР»РёР°Р» Р¤Р“Р‘РЈ "Р Р­Рђ" РњРёРЅСЌРЅРµСЂРіРѕ Р РѕСЃСЃРёРё, 2021. вЂ“ РЎ. 115-120. вЂ“ EDN CTWECA.</li>
+                <li id="ref10">Р РѕРјР°РЅСЋС‚Р°, Р”. Р®. РќРµР№СЂРѕСЃРµС‚РµРІР°СЏ РјРѕРґРµР»СЊ РґР»СЏ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ РѕСЂРёРµРЅС‚РёСЂРѕРІ Р»РёС†Р° / Р”. Р®. Р РѕРјР°РЅСЋС‚Р°, Р•. Рџ. Р›СѓРєР°С‰РёРє // РџСЂРёРєР»Р°РґРЅР°СЏ РјР°С‚РµРјР°С‚РёРєР°: СЃРѕРІСЂРµРјРµРЅРЅС‹Рµ РїСЂРѕР±Р»РµРјС‹ РјР°С‚РµРјР°С‚РёРєРё, РёРЅС„РѕСЂРјР°С‚РёРєРё Рё РјРѕРґРµР»РёСЂРѕРІР°РЅРёСЏ : РјР°С‚РµСЂРёР°Р»С‹ V Р’СЃРµСЂРѕСЃСЃРёР№СЃРєРѕР№ РЅР°СѓС‡РЅРѕ-РїСЂР°РєС‚РёС‡РµСЃРєРѕР№ РєРѕРЅС„РµСЂРµРЅС†РёРё, РјРѕР»РѕРґС‹С… СѓС‡РµРЅС‹С…, РљСЂР°СЃРЅРѕРґР°СЂ, 11вЂ“15 Р°РїСЂРµР»СЏ 2023 РіРѕРґР°. вЂ“ РљСЂР°СЃРЅРѕРґР°СЂ: Р¤Р“Р‘РЈ "Р РѕСЃСЃРёР№СЃРєРѕРµ СЌРЅРµСЂРіРµС‚РёС‡РµСЃРєРѕРµ Р°РіРµРЅС‚СЃС‚РІРѕ" РњРёРЅСЌРЅРµСЂРіРѕ Р РѕСЃСЃРёРё РљСЂР°СЃРЅРѕРґР°СЂСЃРєРёР№ Р¦РќРўР- С„РёР»РёР°Р» Р¤Р“Р‘РЈ "Р Р­Рђ" РњРёРЅСЌРЅРµСЂРіРѕ Р РѕСЃСЃРёРё, 2023. вЂ“ РЎ. 460-463. вЂ“ EDN RGHMKU.</li>
+                <li id="ref11">The GRID audiovisual sentence corpus : [СЃР°Р№С‚]. вЂ“ URL: https://spandh.dcs.shef.ac.uk/gridcorpus/ (РґР°С‚Р° РѕР±СЂР°С‰РµРЅРёСЏ: 10.10.2026).</li>
+                <li id="ref12">РњР°, Рљ. РўСЂРµС…РјРµСЂРЅРѕРµ РіР»СѓР±РѕРєРѕРµ РѕР±СѓС‡РµРЅРёРµ РЅР° Python : СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ / Рљ. РњР°, Р’. РҐРµРіРґРµ, Р›. Р™РѕР»СЊР°РЅ; РїРµСЂРµРІРѕРґ СЃ Р°РЅРіР»РёР№СЃРєРѕРіРѕ Рђ. Р’. Р›РѕРіСѓРЅРѕРІР°. вЂ“ РњРѕСЃРєРІР°: Р”РњРљ РџСЂРµСЃСЃ, 2023. вЂ“ 226 СЃ. вЂ“ ISBN 978-5-93700-202-0.</li>
+            </ol>
+
+        </div> 
+    </div> 
 
 </body>
 </html>
